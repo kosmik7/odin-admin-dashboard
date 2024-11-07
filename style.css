@@ -254,6 +254,7 @@ a {
     grid-column: span 2;
 }
 
+
 .sidebar ul {
     margin-top: 2rem;
 }
@@ -261,6 +262,10 @@ a {
 .sidebar a {
     align-items: center;
     justify-items: center;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar a img {
@@ -277,4 +282,8 @@ a {
 
 .sidebar__logo {
     font-size: 1.7rem;
+}
+
+a.sidebar__logo span  {
+    padding: calc(1.15rem - 1px) 10px 1.15rem 0; /* align with search box */
 }
