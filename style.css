@@ -284,6 +284,134 @@ a {
     font-size: 1.7rem;
 }
 
-a.sidebar__logo span  {
-    padding: calc(1.15rem - 1px) 10px 1.15rem 0; /* align with search box */
+a.sidebar__logo span {
+    padding: calc(1.15rem - 1px) 10px 1.15rem 0;
+    /* align with search box */
+}
+
+/* content ---------------*/
+.content {
+    display: grid;
+    grid:
+        "projects announcements"
+        "projects trending"
+        / 2.5fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--color-background);
+}
+
+.content h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    margin-left: .2ch;
+}
+
+.content h3 {
+    font-weight: 500;
+}
+
+.content p {
+    color: #6f6f6f;
+}
+
+.projects__grid > div,
+.announcements__grid,
+.trending__grid {
+    border-radius: 0.6rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects {
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__grid {
+    flex: 1;
+    display: grid;
+    grid: auto-flow 1fr / repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.projects__grid > div {
+    padding: 2rem 2rem 2rem 1.5rem;
+    display: grid;
+    grid: auto 1fr auto / 1fr;
+    border-left: 0.6rem solid var(--color-secondary);
+}
+
+.projects__grid h3 {
+    font-size: 1.25rem;
+}
+
+.projects__grid p {
+    color: #6f6f6f;
+}
+
+.projects__icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.projects__icons img {
+    width: 1.5em;
+    cursor: pointer;
+}
+
+.announcements__grid {
+    display: grid;
+    grid: repeat(3, auto) / 1fr;
+}
+
+.announcements__grid > div {
+    padding: 2rem 0;
+    margin: 0 2rem;
+}
+
+.announcements__grid > div:not(:first-child) {
+    border-top: 1px solid rgba(0, 0, 0, .25)
+}
+
+.announcements__grid h3 {
+    font-size: 1rem;
+}
+
+.announcements__grid p {
+    font-size: 0.8rem;
+}
+
+.trending__grid {
+    display: grid;
+    grid: auto-flow auto / auto 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.trending__grid > div {
+    grid-column: span 2;
+    display: inherit;
+    grid: auto auto / subgrid;
+    align-items: center;
+}
+
+.trending__grid > div > img {
+    width: 4em;
+    grid-row: span 2;
+    border-radius: 50%;
+}
+
+.trending__grid > div > span {
+    font-weight: 500;
+    align-self: end;
+}
+
+.trending__grid > div > p {
+    align-self: start;
 }
